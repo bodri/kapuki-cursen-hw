@@ -1,0 +1,19 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP MIC5235
+F https://nl.mouser.com/datasheet/2/268/mic5235-778645.pdf
+$ENDCMP
+#
+$CMP STM32G431KBUx
+D ARM Cortex-M4 MCU+FPU, 170 MHz, up to 128 KB Flash, 32 KB SRAM, rich analog, math accelerator
+K ARM Cortex-M4 STM32G4
+F https://www.st.com/resource/en/datasheet/stm32g431c6.pdf
+$ENDCMP
+#
+$CMP STM32L431KCUx
+D ARM Cortex-M4 MCU, 256KB flash, 64KB RAM, 80MHz, 1.71-3.6V, 26 GPIO, UFQFPN-32
+K ARM Cortex-M4 STM32L4 STM32L4x1
+F http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00257211.pdf
+$ENDCMP
+#
+#End Doc Library

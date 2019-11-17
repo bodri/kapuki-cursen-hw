@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name kapuki)(type Legacy)(uri ${KIPRJMOD}/kapuki.lib)(options "")(descr ""))
+)
