@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name kapuki)(type Legacy)(uri ${KIPRJMOD}/kapuki.lib)(options "")(descr ""))
+  (lib (name kapuki-cursen-hw-rescue)(type Legacy)(uri ${KIPRJMOD}/kapuki-cursen-hw-rescue.lib)(options "")(descr ""))
 )
