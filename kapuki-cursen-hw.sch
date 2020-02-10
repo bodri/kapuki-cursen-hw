@@ -4,8 +4,8 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "100A RC precision current sensor"
-Date "2020-01-29"
+Title "60A RC precision current sensor"
+Date "2020-01-31"
 Rev "2"
 Comp "bodrico.com"
 Comment1 "bodri@bodrico.com"
@@ -561,7 +561,7 @@ L Device:R R3
 U 1 1 5DDCAC4A
 P 10350 3050
 F 0 "R3" H 10280 3004 50  0000 R CNN
-F 1 "R" H 10280 3095 50  0000 R CNN
+F 1 "1k" H 10280 3095 50  0000 R CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 10280 3050 50  0001 C CNN
 F 3 "~" H 10350 3050 50  0001 C CNN
 	1    10350 3050
@@ -832,7 +832,7 @@ L Device:R R6
 U 1 1 5DD70BDC
 P 9650 2900
 F 0 "R6" H 9580 2854 50  0000 R CNN
-F 1 "R" H 9580 2945 50  0000 R CNN
+F 1 "4k7" H 9580 2945 50  0000 R CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 9580 2900 50  0001 C CNN
 F 3 "~" H 9650 2900 50  0001 C CNN
 	1    9650 2900
@@ -995,7 +995,7 @@ Extension port
 Text Notes 5800 6350 0    79   ~ 16
 BLDC motor RPM sensor
 Text Notes 3650 1700 0    55   ~ 11
-Absolute maximum ratings\n———————————————————\nMax. battery input voltage: 50V (12S)\nMax. current: 100A\n\nDC characteristics:\n———————————————————\nInput power supply: 4-10V\nPower consuption: 100mA
+Absolute maximum ratings\n———————————————————\nMax. battery input voltage: 50V (12S)\nMax. current: 60A\n\nDC characteristics:\n———————————————————\nInput power supply: 4-10V\nPower consuption: 100mA
 Wire Notes Line style solid
 	3550 800  5400 800 
 Wire Notes Line style solid
@@ -1746,10 +1746,10 @@ Wire Wire Line
 Wire Wire Line
 	10100 5600 10050 5600
 $Comp
-L power:+3V3 #PWR?
+L power:+3V3 #PWR0110
 U 1 1 5E75D595
 P 8200 4950
-F 0 "#PWR?" H 8200 4800 50  0001 C CNN
+F 0 "#PWR0110" H 8200 4800 50  0001 C CNN
 F 1 "+3V3" H 8215 5123 50  0000 C CNN
 F 2 "" H 8200 4950 50  0001 C CNN
 F 3 "" H 8200 4950 50  0001 C CNN
