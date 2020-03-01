@@ -1,12 +1,13 @@
 EESchema Schematic File Version 4
+LIBS:kapuki-cursen-hw-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "60A RC precision current sensor"
-Date "2020-01-31"
-Rev "2"
+Date "2020-02-23"
+Rev "3"
 Comp "bodrico.com"
 Comment1 "bodri@bodrico.com"
 Comment2 ""
@@ -18,7 +19,7 @@ L Device:R_Shunt R1
 U 1 1 5DD089FA
 P 2000 2600
 F 0 "R1" H 1912 2646 50  0000 R CNN
-F 1 "0.0002 1% 12W" H 1912 2555 50  0000 R CNN
+F 1 "0.0002ohm 1% 12W" H 1912 2555 50  0000 R CNN
 F 2 "local:Bourns_ CSS2H" V 1930 2600 50  0001 C CNN
 F 3 "~" H 2000 2600 50  0001 C CNN
 	1    2000 2600
@@ -179,23 +180,17 @@ Wire Wire Line
 $Comp
 L power:GND #PWR03
 U 1 1 5DD21596
-P 1500 4550
-F 0 "#PWR03" H 1500 4300 50  0001 C CNN
-F 1 "GND" H 1505 4377 50  0000 C CNN
-F 2 "" H 1500 4550 50  0001 C CNN
-F 3 "" H 1500 4550 50  0001 C CNN
-	1    1500 4550
+P 1450 4550
+F 0 "#PWR03" H 1450 4300 50  0001 C CNN
+F 1 "GND" H 1455 4377 50  0000 C CNN
+F 2 "" H 1450 4550 50  0001 C CNN
+F 3 "" H 1450 4550 50  0001 C CNN
+	1    1450 4550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1500 4550 1500 4450
-Wire Wire Line
-	1500 4450 1400 4450
-Wire Wire Line
 	1400 4250 2050 4250
 Connection ~ 2050 4250
-Wire Wire Line
-	1400 4350 1750 4350
 Text Notes 800  1125 0    50   ~ 0
 Battery
 Text Notes 925  3175 0    50   ~ 0
@@ -316,7 +311,7 @@ Wire Wire Line
 Connection ~ 3600 2700
 Text Label 3750 2700 0    50   ~ 0
 VREF
-Text Label 1500 4350 0    50   ~ 0
+Text Label 1500 4150 0    50   ~ 0
 RXTX
 $Comp
 L Device:Ferrite_Bead FB1
@@ -338,9 +333,9 @@ MOTORPULSE
 Text Label 9850 3150 0    50   ~ 0
 RXTX
 Text Label 8850 3550 0    50   ~ 0
-SWCLK
-Text Label 8850 3650 0    50   ~ 0
 SWDIO
+Text Label 8850 3650 0    50   ~ 0
+SWCLK
 Wire Wire Line
 	8800 3650 9350 3650
 Wire Wire Line
@@ -738,17 +733,6 @@ $EndComp
 Wire Wire Line
 	2350 4250 2350 4200
 $Comp
-L Connector_Generic:Conn_01x03 J3
-U 1 1 5E47DF7F
-P 1200 4350
-F 0 "J3" H 1118 4667 50  0000 C CNN
-F 1 "Conn_01x03" H 1118 4576 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1200 4350 50  0001 C CNN
-F 3 "~" H 1200 4350 50  0001 C CNN
-	1    1200 4350
-	-1   0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR010
 U 1 1 5E4A4D8C
 P 1750 6900
@@ -779,7 +763,7 @@ L Device:C C9
 U 1 1 5E4AD6FB
 P 1450 5850
 F 0 "C9" V 1300 5800 50  0000 L CNN
-F 1 "100nF" V 1600 5750 50  0000 L CNN
+F 1 "2.2uF" V 1600 5750 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 1488 5700 50  0001 C CNN
 F 3 "~" H 1450 5850 50  0001 C CNN
 	1    1450 5850
@@ -939,7 +923,7 @@ L Device:R R7
 U 1 1 5E58EA33
 P 3350 6700
 F 0 "R7" H 3280 6654 50  0000 R CNN
-F 1 "50" H 3280 6745 50  0000 R CNN
+F 1 "1k" H 3280 6745 50  0000 R CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 3280 6700 50  0001 C CNN
 F 3 "~" H 3350 6700 50  0001 C CNN
 	1    3350 6700
@@ -995,7 +979,7 @@ Extension port
 Text Notes 5800 6350 0    79   ~ 16
 BLDC motor RPM sensor
 Text Notes 3650 1700 0    55   ~ 11
-Absolute maximum ratings\n———————————————————\nMax. battery input voltage: 50V (12S)\nMax. current: 60A\n\nDC characteristics:\n———————————————————\nInput power supply: 4-10V\nPower consuption: 100mA
+Absolute maximum ratings\n———————————————————\nMax. battery input voltage: 50V (12S)\nMax. current: 60A\n\nDC characteristics:\n———————————————————\nInput power supply: 4-10V\nPower consuption: 20mA
 Wire Notes Line style solid
 	3550 800  5400 800 
 Wire Notes Line style solid
@@ -1760,4 +1744,21 @@ Wire Wire Line
 	8150 5150 8200 5150
 Wire Wire Line
 	8200 5150 8200 4950
+$Comp
+L Connector_Generic:Conn_01x03 J3
+U 1 1 5E47DF7F
+P 1200 4250
+F 0 "J3" H 1200 3950 50  0000 C CNN
+F 1 "Conn_01x03" H 1200 4050 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1200 4250 50  0001 C CNN
+F 3 "~" H 1200 4250 50  0001 C CNN
+	1    1200 4250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1400 4150 1750 4150
+Wire Wire Line
+	1400 4350 1450 4350
+Wire Wire Line
+	1450 4350 1450 4550
 $EndSCHEMATC
