@@ -1,5 +1,11 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP INA199
+D  26-V, Bidirectional, Zero-Drift, Low- or High-Side, Voltage-Output, Current-Shunt Monitor
+K current monitor shunt sensor bidirectional high low
+F https://www.ti.com/lit/ds/symlink/ina199.pdf
+$ENDCMP
+#
 $CMP MCP1501
 D High-Precision Buffered Voltage Reference
 F http://ww1.microchip.com/downloads/en/DeviceDoc/20005474E.pdf
@@ -9,16 +15,16 @@ $CMP MIC5235
 F https://nl.mouser.com/datasheet/2/268/mic5235-778645.pdf
 $ENDCMP
 #
+$CMP STM32G431CBTx
+D Arm® Cortex®-M4 32-bit MCU+FPU, 170 MHz /213 DMIPS,  up to 128 KB Flash, 32 KB SRAM, rich analog, math accelerator
+K ARM Cortex-M4 STM32G4 STM32G4x1
+F https://www.st.com/resource/en/datasheet/stm32g431cb.pdf
+$ENDCMP
+#
 $CMP STM32G431KBUx
 D ARM Cortex-M4 MCU+FPU, 170 MHz, up to 128 KB Flash, 32 KB SRAM, rich analog, math accelerator
 K ARM Cortex-M4 STM32G4
 F https://www.st.com/resource/en/datasheet/stm32g431c6.pdf
-$ENDCMP
-#
-$CMP STM32L431KCUx
-D ARM Cortex-M4 MCU, 256KB flash, 64KB RAM, 80MHz, 1.71-3.6V, 26 GPIO, UFQFPN-32
-K ARM Cortex-M4 STM32L4 STM32L4x1
-F http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00257211.pdf
 $ENDCMP
 #
 #End Doc Library
