@@ -230,39 +230,18 @@ Wire Wire Line
 	8800 4950 9150 4950
 Wire Wire Line
 	7600 3550 7250 3550
-$Comp
-L Connector_Generic:Conn_01x06 J7
-U 1 1 5DD75BF4
-P 4000 6200
-F 0 "J7" H 4000 5800 50  0000 C CNN
-F 1 "Conn_01x06" H 3918 5766 50  0001 C CNN
-F 2 "Connector_PinSocket_1.27mm:PinSocket_1x06_P1.27mm_Vertical" H 4000 6200 50  0001 C CNN
-F 3 "~" H 4000 6200 50  0001 C CNN
-	1    4000 6200
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	7600 3750 7250 3750
 Text Label 7250 3750 0    50   ~ 0
 UMEAS
-Text Label 4250 5900 0    50   ~ 0
-EXT1
-Text Label 4250 6000 0    50   ~ 0
-EXT2
-Text Label 4250 6100 0    50   ~ 0
-EXT3
-Text Label 4250 6200 0    50   ~ 0
-EXT4
-Text Label 4250 6300 0    50   ~ 0
-EXT5
+Text Label 4450 6100 2    50   ~ 0
+RX
+Text Label 4450 6200 2    50   ~ 0
+TX
 Wire Wire Line
-	4200 6000 4500 6000
+	4150 6100 4450 6100
 Wire Wire Line
-	4200 6100 4500 6100
-Wire Wire Line
-	4200 6200 4500 6200
-Wire Wire Line
-	4200 6300 4500 6300
+	4150 6200 4450 6200
 Wire Wire Line
 	9950 3750 9950 3650
 Text Label 1850 6100 2    50   ~ 0
@@ -646,7 +625,7 @@ Wire Notes Line
 	2850 5400 2850 7300
 Text Notes 1150 7250 0    79   ~ 16
 SWD programming\n    interface
-Text Notes 3950 7150 0    79   ~ 16
+Text Notes 3750 7050 0    79   ~ 16
 Extension port
 Text Notes 3650 1700 0    55   ~ 11
 Absolute maximum ratings\n———————————————————\nMax. battery input voltage: 27V (6S)\nMax. current: 60A\n\nDC characteristics:\n———————————————————\nInput power supply: 4-10V\nPower consuption: 20mA
@@ -1356,23 +1335,21 @@ Wire Wire Line
 Wire Wire Line
 	9950 3750 10325 3750
 Connection ~ 9950 3750
-Wire Wire Line
-	4200 5900 4500 5900
 $Comp
 L power:GND #PWR0109
 U 1 1 5E715479
-P 4250 6500
-F 0 "#PWR0109" H 4250 6250 50  0001 C CNN
-F 1 "GND" H 4250 6350 50  0000 C CNN
-F 2 "" H 4250 6500 50  0001 C CNN
-F 3 "" H 4250 6500 50  0001 C CNN
-	1    4250 6500
+P 4200 6400
+F 0 "#PWR0109" H 4200 6150 50  0001 C CNN
+F 1 "GND" H 4200 6250 50  0000 C CNN
+F 2 "" H 4200 6400 50  0001 C CNN
+F 3 "" H 4200 6400 50  0001 C CNN
+	1    4200 6400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4250 6500 4250 6400
+	4200 6400 4200 6300
 Wire Wire Line
-	4250 6400 4200 6400
+	4200 6300 4150 6300
 $Comp
 L power:+3V3 #PWR0110
 U 1 1 5E75D595
@@ -1414,17 +1391,6 @@ F 1 "INA199" H 3400 2500 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6" H 3250 1950 50  0001 C CNN
 F 3 "https://www.ti.com/lit/ds/symlink/ina199.pdf" H 3400 2750 50  0001 C CNN
 	1    3250 2600
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VCC #PWR0105
-U 1 1 601D6C1D
-P 3200 2100
-F 0 "#PWR0105" H 3200 1950 50  0001 C CNN
-F 1 "VCC" H 3215 2273 50  0000 C CNN
-F 2 "" H 3200 2100 50  0001 C CNN
-F 3 "" H 3200 2100 50  0001 C CNN
-	1    3200 2100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1485,20 +1451,18 @@ Connection ~ 8100 5300
 $Comp
 L power:GND #PWR0111
 U 1 1 602C6333
-P 7150 4400
-F 0 "#PWR0111" H 7150 4150 50  0001 C CNN
-F 1 "GND" H 7155 4227 50  0000 C CNN
-F 2 "" H 7150 4400 50  0001 C CNN
-F 3 "" H 7150 4400 50  0001 C CNN
-	1    7150 4400
+P 6650 4600
+F 0 "#PWR0111" H 6650 4350 50  0001 C CNN
+F 1 "GND" H 6655 4427 50  0000 C CNN
+F 2 "" H 6650 4600 50  0001 C CNN
+F 3 "" H 6650 4600 50  0001 C CNN
+	1    6650 4600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7150 4400 7150 4350
+	6650 4600 6650 4350
 Wire Wire Line
-	7150 4350 7200 4350
-Wire Wire Line
-	7500 4350 7600 4350
+	6650 4350 6700 4350
 Wire Wire Line
 	6750 2900 6750 3000
 Wire Wire Line
@@ -1561,12 +1525,12 @@ Connection ~ 8400 1750
 $Comp
 L Device:R R8
 U 1 1 5E6244BC
-P 7350 4350
-F 0 "R8" V 7425 4400 50  0000 R CNN
-F 1 "10k" V 7346 4421 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 7280 4350 50  0001 C CNN
-F 3 "~" H 7350 4350 50  0001 C CNN
-	1    7350 4350
+P 6850 4350
+F 0 "R8" V 6925 4400 50  0000 R CNN
+F 1 "10k" V 6846 4421 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 6780 4350 50  0001 C CNN
+F 3 "~" H 6850 4350 50  0001 C CNN
+	1    6850 4350
 	0    -1   -1   0   
 $EndComp
 Text Notes 1800 5300 0    79   ~ 16
@@ -1667,4 +1631,61 @@ Wire Wire Line
 	3600 2200 3700 2200
 Wire Wire Line
 	3700 2200 3700 2300
+$Comp
+L Connector_Generic:Conn_01x03 J7
+U 1 1 604400C2
+P 3950 6200
+F 0 "J7" H 3868 5967 50  0000 C CNN
+F 1 "Conn_01x03" H 3868 5966 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 3950 6200 50  0001 C CNN
+F 3 "~" H 3950 6200 50  0001 C CNN
+	1    3950 6200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Switch:SW_Push SW1
+U 1 1 60461471
+P 6850 4100
+F 0 "SW1" H 6850 4385 50  0000 C CNN
+F 1 "BOOT" H 6850 4294 50  0000 C CNN
+F 2 "Button_Switch_SMD:Panasonic_EVQPUJ_EVQPUA" H 6850 4300 50  0001 C CNN
+F 3 "~" H 6850 4300 50  0001 C CNN
+	1    6850 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0112
+U 1 1 6046280E
+P 6450 3850
+F 0 "#PWR0112" H 6450 3700 50  0001 C CNN
+F 1 "+3V3" H 6465 4023 50  0000 C CNN
+F 2 "" H 6450 3850 50  0001 C CNN
+F 3 "" H 6450 3850 50  0001 C CNN
+	1    6450 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 3850 6450 4100
+Wire Wire Line
+	6450 4100 6650 4100
+Wire Wire Line
+	7000 4350 7350 4350
+Wire Wire Line
+	7050 4100 7350 4100
+Wire Wire Line
+	7350 4100 7350 4350
+Connection ~ 7350 4350
+Wire Wire Line
+	7350 4350 7600 4350
+$Comp
+L power:+3V3 #PWR?
+U 1 1 604E9D63
+P 3200 2100
+F 0 "#PWR?" H 3200 1950 50  0001 C CNN
+F 1 "+3V3" H 3215 2273 50  0000 C CNN
+F 2 "" H 3200 2100 50  0001 C CNN
+F 3 "" H 3200 2100 50  0001 C CNN
+	1    3200 2100
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
