@@ -1,4 +1,4 @@
-update=2/2/2021 14:01:12
+update=2/4/2021 13:40:23
 version=1
 last_client=kicad
 [general]
@@ -12,11 +12,21 @@ NetIExt=net
 version=1
 LibDir=
 [eeschema/libraries]
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceAjustPassiveValues=0
+LabSize=50
+ERC_TestSimilarLabels=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=
 LastNetListRead=kapuki-cursen-hw.net
-CopperLayerCount=2
+CopperLayerCount=4
 BoardThickness=1.6
 AllowMicroVias=0
 AllowBlindVias=0
@@ -29,6 +39,9 @@ MinMicroViaDiameter=0.6858
 MinMicroViaDrill=0.3302
 MinHoleToHole=0.25
 TrackWidth1=0.1524
+TrackWidth2=0.3
+TrackWidth3=0.5
+TrackWidth4=1
 ViaDiameter1=0.6858
 ViaDrill1=0.3302
 dPairWidth1=0.1524
@@ -65,11 +78,11 @@ Enabled=1
 [pcbnew/Layer.In1.Cu]
 Name=In1.Cu
 Type=0
-Enabled=0
+Enabled=1
 [pcbnew/Layer.In2.Cu]
 Name=In2.Cu
 Type=0
-Enabled=0
+Enabled=1
 [pcbnew/Layer.In3.Cu]
 Name=In3.Cu
 Type=0
@@ -247,13 +260,3 @@ uViaDrill=0.3302
 dPairWidth=0.1524
 dPairGap=0.1524
 dPairViaGap=0.25
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=Pcbnew
-SpiceAjustPassiveValues=0
-LabSize=50
-ERC_TestSimilarLabels=1
